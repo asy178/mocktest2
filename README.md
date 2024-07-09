@@ -14,3 +14,11 @@ CHECK 2:
 3. kubectl scale -n qq2 deployments lab-deployment --replicas=4
 4. kubectl get deployments -n qq2
 5. kubectl get pods -n qq2
+
+CHECK 3:
+1. kubectl create -f 3.1-namespace.yaml
+2. kubectl apply -n qq3 -f 3.2-deployment.yaml
+3. kubectl set image deployment/nginx-deployment nginx=nginx:alpine -n qq3
+4. kubectl describe deployment nginx-deployment -n qq3
+
+ 
