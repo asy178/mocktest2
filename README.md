@@ -31,3 +31,7 @@ CHECK 4:
 CHECK 6:
 1. nano 6.3-daemonset.yaml
 2. kubectl apply -n qq3 -f 6.3-daemonset.yaml
+
+CHECK 7:
+1. nano 7.4-pod.yaml
+2. kubectl apply -n qq3 -f 7.4-pod.yaml
