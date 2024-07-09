@@ -28,3 +28,6 @@ CHECK 4:
 4. kubectl rollout undo deployment/apache-deployment --namespace=qq3
 5. kubectl rollout history deployment/apache-deployment --namespace=qq3
 
+CHECK 6:
+1. nano 6.3-daemonset.yaml
+2. kubectl apply -n qq3 -f 6.3-daemonset.yaml
