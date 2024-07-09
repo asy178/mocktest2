@@ -21,4 +21,10 @@ CHECK 3:
 3. kubectl set image deployment/nginx-deployment nginx=nginx:alpine -n qq3
 4. kubectl describe deployment nginx-deployment -n qq3
 
- 
+CHECK 4:
+1. kubectl create deployment apache-deployment --image=httpd:latest --dry-run=client -o yaml --namespace=qq3 > 4.2-deployment.yaml
+2. kubectl apply -n qq3 -f 4.2-deployment.yaml
+3. kubectl set image deployment/apache-deployment httpd=httpd:bookworm --namespace=qq3
+4. kubectl rollout undo deployment/apache-deployment --namespace=qq3
+5. kubectl rollout history deployment/apache-deployment --namespace=qq3
+
